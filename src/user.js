@@ -12,8 +12,8 @@ class User {
         this.profilePic.push(pic);
     }
     likeRecipe (recipe) {
-        this.likedRecipes.push(recipe);
-        Recipe.likes++;
+        this.likedRecipes.push(recipe.name);
+        recipe.likes++;
     }
 }
 
