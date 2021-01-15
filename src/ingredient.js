@@ -10,7 +10,7 @@ class Ingredient {
       const num = this.amount * 0.0022046
       if (num > 1) {
         const lbs = num.toPrecision(1)
-        const oz = (num - lbs * 16).toFixed(1)
+        const oz = ((num - lbs) * 16).toFixed(1)
         return `${lbs}lb ${oz}oz`
       }
       const ounces = (this.amount / 28.34952).toPrecision(2)
