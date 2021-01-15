@@ -1,5 +1,3 @@
-const Ingredient = require ('./ingredient');
-
 class Recipe {
     constructor (name, difficulty, time, serves) {
         this.name = name
@@ -9,6 +7,7 @@ class Recipe {
         this.ingredients = []
         this.method = []
         this.photo = "default.jpg"
+        this.diet = []
         this.likes = 0
     }
     addIngredients (ingredient) {
@@ -19,6 +18,9 @@ class Recipe {
     }
     addPhoto (photo) {
         this.photo.push(photo);
+    }
+    addDiet (diet) {
+        this.diet.push(diet); // Gluten free, Vegetarian, Vegan, Lactose Free, Raw
     }
 }
 
