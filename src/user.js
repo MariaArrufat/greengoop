@@ -1,5 +1,3 @@
-const Recipe = require ('./recipe');
-
 class User {
     constructor (name, email, pssw) {
         this.name = name
@@ -8,13 +6,22 @@ class User {
         this.profilePic = "defaultPic.jpg"
         this.likedRecipes = []
     }
+
     addProfilePic (pic) {
         this.profilePic.push(pic);
     }
+
     likeRecipe (recipe) {
         this.likedRecipes.push(recipe.name);
-        recipe.likes++;
+        recipe.likes += 1;
     }
+
+    unlikeRecipe (recipe) {
+        this.likedRecipes.splice(this.likedRecipes.indexOf(recipe.name), 2);
+        recipe.likes -= 1;
+    }
+        
 }
+
 
 module.exports = User
