@@ -10,8 +10,8 @@ if (day < 9) {
 
 class Comments {
   constructor(recipe, user, comment) {
-    this.recipe = recipe
-    this.user = user
+    this.recipe = recipe.name
+    this.user = user.name
     this.date = `${day}/${month}/${now.getFullYear()}`
     this.comment = comment
     this.myPic = []
