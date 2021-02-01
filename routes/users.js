@@ -17,7 +17,7 @@ router.get('/', function(req, res, next) {
 router.get('/:userId', function(req, res, next) {
   const user = users[req.params.userId]
   if (user) res.send(user)
-  else res.sendStatus(404)
+  else res.sendStatus(404) // else next(new Error('User not found'))
 })
 
 module.exports = router;
